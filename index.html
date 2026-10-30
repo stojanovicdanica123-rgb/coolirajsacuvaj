@@ -1,0 +1,1555 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeftina rashladna komora od običnog klima uređaja | °Cooliraj Sačuvaj™</title>
+<meta name="description" content="°CoolirajSačuvaj uređaj pretvara običan kućni klima uređaj i izolovan prostor u pametnu rashladnu komoru do +2 °C. Komora ispod 1.000 €, bez troškova održavanja, sa mobilnom aplikacijom. Razvijeno u Srbiji.">
+<script>
+// Ice intro plays once per browser session (add ?intro to the URL to replay it)
+try {
+  if ((!sessionStorage.getItem('introSeen') || /[?&]intro/.test(location.search)) && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('intro');
+    sessionStorage.setItem('introSeen', '1');
+  }
+} catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+:root{
+  --navy-950:#06111f;
+  --navy-900:#0a1a2f;
+  --navy-800:#0f2742;
+  --navy-700:#16365a;
+  --ice-500:#22c3e6;
+  --ice-400:#4fd6f2;
+  --ice-300:#8be6f8;
+  --ice-100:#e3f7fc;
+  --frost:#f3fafd;
+  --white:#ffffff;
+  --ink:#0d1b2a;
+  --ink-2:#3b4d61;
+  --ink-3:#6b7d90;
+  --line:#dbe7ef;
+  --ok:#16a34a;
+  --viber:#7360f2;
+  --radius:18px;
+  --shadow:0 10px 30px -12px rgba(10,26,47,.25);
+  --shadow-lg:0 30px 60px -20px rgba(10,26,47,.45);
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--max);margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em}
+h2{font-size:clamp(28px,4vw,42px);font-weight:800}
+/* Ice-block headings: clear ice inside the letters (cracks + frost over a glassy gradient, one band per line),
+   a white rim, a few px of extruded depth and, on dark sections, a reflection below */
+.iced,.hero .iced em{
+  background-image:url(img/pukotine.jpg),url(img/led.webp),linear-gradient(180deg,#a7d6ef 0%,#4f8fbb 36%,#2c6a96 60%,#86c2e3 100%);
+  background-size:900px auto,560px auto,100% 1.15em;background-position:var(--crack,50% 50%),0 0,0 0;
+  background-blend-mode:screen,soft-light,normal;-webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-text-stroke:1px rgba(255,255,255,.55)}
+.iced{filter:drop-shadow(1px 1px 0 #2b5f84) drop-shadow(1px 1px 0 #24547a) drop-shadow(1px 1px 0 #1d4a6e) drop-shadow(0 10px 14px rgba(10,26,47,.22))}
+.iced.on-dark{background-image:url(img/pukotine.jpg),url(img/led.webp),linear-gradient(180deg,#f2fbff 0%,#c2e6f7 30%,#7fb2d2 58%,#e0f5ff 100%);
+  filter:drop-shadow(1px 1px 0 #6b9cbd) drop-shadow(1px 1px 0 #567fa3) drop-shadow(1px 1px 0 #3f6c90) drop-shadow(0 0 26px rgba(79,214,242,.25));
+  -webkit-box-reflect:below -2px linear-gradient(transparent 80%,rgba(255,255,255,.2))}
+.hero .iced em{background-image:url(img/pukotine.jpg),url(img/led.webp),linear-gradient(180deg,#eafcff 0%,#8be6f8 32%,#22c3e6 60%,#c4f4ff 100%);
+  background-position:var(--crack,50% 50%),0 0,0 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ice-500);margin-bottom:14px}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
+.lead{font-size:18px;color:var(--ink-2);max-width:640px}
+.section-head{margin-bottom:56px}
+.section-head.center{text-align:center}
+.section-head.center .lead{margin:16px auto 0}
+.section-head .lead{margin-top:16px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:inherit;font-weight:700;font-size:16px;padding:15px 26px;border-radius:999px;border:0;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;white-space:nowrap}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,var(--ice-400),var(--ice-500));color:var(--navy-950);box-shadow:0 10px 30px -10px rgba(34,195,230,.7)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.22)}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+.btn-dark{background:var(--navy-900);color:#fff}
+.btn-viber{background:var(--viber);color:#fff}
+.btn-block{width:100%}
+
+/* Header */
+.header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .25s ease,box-shadow .25s ease}
+.header.scrolled{background:rgba(6,17,31,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.header .container{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800;font-size:18px}
+.brand img{width:44px;height:44px;border-radius:10px;object-fit:cover}
+.brand small{display:block;font-size:11px;font-weight:600;color:var(--ice-300);letter-spacing:.08em;text-transform:uppercase}
+.nav{display:flex;align-items:center;gap:24px}
+.nav a{color:rgba(255,255,255,.78);font-weight:600;font-size:15px;transition:color .15s;white-space:nowrap}
+.brand > div{white-space:nowrap}
+.nav a:hover{color:#fff}
+.header-cta{display:flex;align-items:center;gap:10px}
+.header-phone{color:#fff;font-weight:700;display:flex;align-items:center;gap:8px;font-size:15px;white-space:nowrap}
+.header-phone svg{width:18px;height:18px;color:var(--ice-400)}
+.menu-btn{display:none;background:none;border:0;color:#fff;cursor:pointer;padding:6px}
+.menu-btn svg{width:28px;height:28px}
+
+/* Hero */
+.hero{position:relative;background:radial-gradient(1200px 600px at 80% -10%,rgba(34,195,230,.25),transparent 60%),radial-gradient(900px 500px at -10% 110%,rgba(34,195,230,.12),transparent 60%),linear-gradient(180deg,var(--navy-950),var(--navy-900));color:#fff;padding:150px 0 110px;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:28px 28px;mask-image:linear-gradient(180deg,#000,transparent 85%);pointer-events:none}
+.hero .container{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px 7px 8px;border-radius:999px;background:rgba(34,195,230,.12);border:1px solid rgba(34,195,230,.35);color:var(--ice-300);font-size:13px;font-weight:700;margin-bottom:24px}
+.badge span{background:var(--ice-500);color:var(--navy-950);border-radius:999px;padding:2px 9px;font-size:12px}
+.hero h1{font-size:clamp(36px,5.4vw,62px);font-weight:800}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--ice-300),var(--ice-500));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{font-size:19px;color:rgba(255,255,255,.75);margin:22px 0 34px;max-width:560px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+.hero-checks{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:38px;color:rgba(255,255,255,.8);font-weight:600;font-size:15px}
+.hero-checks li{list-style:none;display:flex;align-items:center;gap:8px}
+.hero-checks svg{width:18px;height:18px;color:var(--ice-400)}
+
+.hero-visual{position:relative}
+/* Animated device: product photo with the display and button presses drawn on top */
+.device{position:relative;z-index:1;aspect-ratio:460/480;width:100%}
+.device > img{position:absolute;inset:0;width:100%;height:100%}
+.device .press{opacity:0;transition:opacity .15s ease;filter:brightness(1.6) saturate(1.3);-webkit-mask-image:radial-gradient(ellipse 3.8% 3.7% at var(--x) 34.4%,#000 50%,transparent 100%);mask-image:radial-gradient(ellipse 3.8% 3.7% at var(--x) 34.4%,#000 50%,transparent 100%)}
+.device .press.on{opacity:1}
+.lcd{position:absolute;left:38.9%;top:31%;width:17.2%;height:6.9%;border-radius:2px;background:linear-gradient(180deg,#1e2129,#12151b);box-shadow:inset 0 0 0 1px rgba(255,255,255,.05)}
+.lcd svg{position:absolute;left:5%;top:12%;width:90%;height:76%;overflow:visible}
+.lcd .ghost *{fill:rgba(150,200,235,.07)}
+.lcd .lit *{fill:#9be8ff;opacity:0;transition:opacity .08s}
+.lcd .lit .on{opacity:1}
+.lcd-bloom,.snow-glow{position:absolute;border-radius:50%;pointer-events:none;mix-blend-mode:screen}
+.lcd-bloom{left:31%;top:22%;width:33%;height:25%;background:radial-gradient(closest-side,rgba(60,190,245,.38),transparent);opacity:0;transition:opacity .3s}
+.device.lit .lcd-bloom{opacity:1}
+.snow-glow{left:76.5%;top:20.8%;width:14%;aspect-ratio:1;translate:-50% -50%;background:radial-gradient(closest-side,rgba(120,225,255,.5),transparent);animation:snow 3.2s ease-in-out infinite}
+.device.cooling .snow-glow{animation-duration:1.1s}
+@keyframes snow{0%,100%{opacity:.25;scale:.85}50%{opacity:1;scale:1.1}}
+.orbit{position:absolute;left:-6%;width:112%;top:6%;z-index:0;pointer-events:none;overflow:visible}
+.orbit path{fill:none;stroke:rgba(139,230,248,.28);stroke-width:1.2}
+@media (prefers-reduced-motion:reduce){.snow-glow{animation:none;opacity:.7}}
+.temp-chip{position:absolute;z-index:2;display:flex;align-items:center;gap:12px;background:rgba(10,26,47,.92);backdrop-filter:blur(10px);border:1px solid rgba(139,230,248,.25);border-radius:16px;padding:12px 16px;box-shadow:var(--shadow-lg);color:#fff}
+.temp-chip .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(34,195,230,.18);color:var(--ice-300)}
+.temp-chip .ic svg{width:22px;height:22px}
+.temp-chip b{display:block;font-size:20px;line-height:1.1}
+.temp-chip small{font-size:12px;color:rgba(255,255,255,.65);font-weight:600}
+.temp-chip.one{left:-28px;bottom:-26px}
+.temp-chip.two{right:-18px;top:-24px}
+.live-dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 4px rgba(52,211,153,.2);display:inline-block;margin-right:6px}
+
+/* Stats */
+.stats{background:var(--navy-900);padding:0 0 70px;color:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,.1);border-radius:22px;background:rgba(255,255,255,.03);overflow:hidden}
+.stat{padding:30px 26px;border-right:1px solid rgba(255,255,255,.1)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:clamp(28px,3.4vw,40px);font-weight:800;color:var(--ice-300);letter-spacing:-.02em}
+.stat span{color:rgba(255,255,255,.72);font-weight:600;font-size:15px}
+
+/* Steps */
+.steps{background:var(--frost)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:step}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px 30px;box-shadow:var(--shadow)}
+.step .num{display:inline-grid;place-items:center;width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--navy-800),var(--navy-700));color:var(--ice-300);font-weight:800;font-size:20px;margin-bottom:22px}
+.step h3{font-size:21px;margin-bottom:10px}
+.step p{color:var(--ink-2);font-size:15.5px}
+.step .tip{margin-top:16px;padding:12px 14px;border-radius:12px;background:var(--ice-100);color:var(--navy-800);font-size:14px;font-weight:600}
+.step .tip.hot{background:#fff4e5;color:#9a4b00}
+.steps-note{margin-top:34px;text-align:center;color:var(--ink-2);font-weight:600}
+
+/* Compare */
+.compare-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.compare{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);font-size:15.5px}
+.compare th,.compare td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line)}
+.compare tr:last-child td{border-bottom:0}
+.compare thead th{background:var(--frost);font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3)}
+.compare thead th.us{background:var(--navy-900);color:var(--ice-300)}
+.compare td.us{background:#f4fcfe;font-weight:700;color:var(--navy-800)}
+.compare td:first-child{font-weight:600;color:var(--ink-2)}
+.yes{color:var(--ok)}
+.no{color:#c2410c}
+.compare-points{list-style:none;display:grid;gap:14px;margin-top:28px}
+.compare-points li{display:flex;gap:12px;align-items:flex-start;font-weight:600}
+.compare-points svg{width:22px;height:22px;color:var(--ice-500);flex:none;margin-top:2px}
+.footnote{font-size:13px;color:var(--ink-3);margin-top:14px}
+
+/* Calculator */
+.calc{background:linear-gradient(180deg,var(--navy-900),var(--navy-950));color:#fff;position:relative;overflow:hidden}
+.calc::before{content:"";position:absolute;width:700px;height:700px;right:-250px;top:-250px;background:radial-gradient(circle,rgba(34,195,230,.18),transparent 65%)}
+.calc .container{position:relative}
+.calc .lead{color:rgba(255,255,255,.72)}
+.calc-box{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow-lg)}
+.calc-form{background:rgba(255,255,255,.04);padding:36px}
+.calc-result{background:#fff;color:var(--ink);padding:36px;display:flex;flex-direction:column}
+.field{margin-bottom:22px}
+.field > label,.field > .label{display:block;font-weight:700;font-size:14px;margin-bottom:10px;color:rgba(255,255,255,.9)}
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.input-unit{position:relative}
+.input-unit input{width:100%;font:inherit;font-weight:700;font-size:18px;padding:14px 40px 14px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;outline:none;transition:border .15s}
+.input-unit input:focus{border-color:var(--ice-400)}
+.input-unit span{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.5);font-weight:600}
+.input-unit small{display:block;margin-top:6px;font-size:12px;color:rgba(255,255,255,.55);font-weight:600}
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:8px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{display:block;text-align:center;padding:12px 8px;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);cursor:pointer;font-weight:700;font-size:14px;line-height:1.3;transition:all .15s}
+.seg label small{display:block;font-weight:600;font-size:12px;color:rgba(255,255,255,.55)}
+.seg input:checked + label{background:rgba(34,195,230,.16);border-color:var(--ice-400);color:#fff}
+.seg input:focus-visible + label{outline:2px solid var(--ice-400);outline-offset:2px}
+.result-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.result-top .label{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);font-weight:700}
+.btu{font-size:clamp(44px,6vw,64px);font-weight:800;letter-spacing:-.03em;color:var(--navy-900);line-height:1}
+.btu small{font-size:22px;color:var(--ink-3);font-weight:700;margin-left:6px}
+.btu-note{color:var(--ink-2);font-weight:600;margin:10px 0 24px}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.result-grid div{background:var(--frost);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.result-grid span{display:block;font-size:12px;color:var(--ink-3);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.result-grid b{font-size:19px;color:var(--navy-900)}
+.warn{display:none;padding:12px 14px;border-radius:12px;background:#fff4e5;color:#9a4b00;font-weight:600;font-size:14px;margin-bottom:18px}
+.warn.show{display:block}
+.calc-result .disclaimer{font-size:13px;color:var(--ink-3);margin-top:14px}
+.calc-result .btn{margin-top:auto}
+
+/* App: sticky stage, the phone screen scrolls through the features while the page scrolls */
+#aplikacija{padding:0;--hh:76px}
+.app-track{position:relative}
+.app-stage{position:sticky;top:var(--hh);height:calc(100vh - var(--hh));height:calc(100svh - var(--hh));display:flex;align-items:center;overflow:hidden}
+.app-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center;width:100%}
+.app-steps{list-style:none;display:grid;gap:6px;margin-top:30px;counter-reset:st}
+.app-steps li{display:flex;align-items:center;gap:14px;padding:10px 14px;border-radius:14px;font-weight:700;color:var(--ink-3);cursor:pointer;transition:background .3s,color .3s}
+.app-steps li::before{counter-increment:st;content:"0" counter(st);font-size:13px;color:var(--ink-3);width:22px}
+.app-steps svg{width:22px;height:22px;flex:none}
+.app-steps li.on{background:var(--ice-100);color:var(--navy-800)}
+.app-steps li.on::before{color:var(--ice-500)}
+.app-bar{height:3px;border-radius:3px;background:var(--line);margin:18px 14px 0;overflow:hidden}
+.app-bar i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--ice-400),var(--ice-500));transform-origin:left;transform:scaleX(0)}
+.app-phone{position:relative;display:flex;justify-content:flex-end}
+.phone-wrap{flex:none}
+.phone{width:300px;border-radius:44px;padding:12px;background:#0b1320;box-shadow:var(--shadow-lg),0 0 0 2px #1e2a3a inset;transform-origin:0 0}
+.screen{border-radius:34px;background:linear-gradient(180deg,#0f2742,#0a1a2f);color:#fff;height:560px;position:relative;overflow:hidden}
+.screen::before{content:"";position:absolute;z-index:3;top:10px;left:50%;transform:translateX(-50%);width:90px;height:24px;background:#0b1320;border-radius:20px}
+.scr-page{padding:26px 20px 30px;transition:transform .12s linear;will-change:transform}
+.scr-head{display:flex;justify-content:space-between;align-items:center;margin-top:26px;font-size:13px;color:rgba(255,255,255,.7);font-weight:600}
+.scr-block{margin-top:14px;padding:12px;border-radius:20px;transition:opacity .4s,box-shadow .4s,background .4s}
+.screen.focus .scr-block{opacity:.4}
+.screen.focus .scr-block.hl{opacity:1;background:rgba(34,195,230,.07);box-shadow:0 0 0 2px var(--ice-400),0 0 26px -4px rgba(34,195,230,.6)}
+.scr-label{display:block;font-size:11px;color:rgba(255,255,255,.55);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+@property --dial{syntax:'<percentage>';inherits:false;initial-value:0%}
+.dial{margin:8px auto 14px;width:180px;height:180px;border-radius:50%;--dial:0%;background:conic-gradient(var(--ice-400) 0 var(--dial),rgba(255,255,255,.08) var(--dial) 100%);transition:--dial 1.4s cubic-bezier(.2,.8,.2,1);display:grid;place-items:center;position:relative}
+.seen .dial{--dial:62%}
+.dial::before{content:"";position:absolute;inset:12px;border-radius:50%;background:#0d2139}
+.dial div{position:relative;text-align:center}
+.dial b{font-size:48px;font-weight:800;letter-spacing:-.03em}
+.dial small{display:block;font-size:12px;color:rgba(255,255,255,.6);font-weight:600}
+.scr-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.scr-tile{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:12px 14px}
+.scr-tile small{display:block;font-size:11px;color:rgba(255,255,255,.55);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.scr-tile b{font-size:18px}
+.setpoint{display:flex;align-items:center;justify-content:space-between;background:rgba(34,195,230,.12);border:1px solid rgba(34,195,230,.3);border-radius:16px;padding:10px 12px}
+.setpoint button{width:36px;height:36px;border-radius:10px;border:0;background:rgba(255,255,255,.1);color:#fff;font-size:20px;font-weight:700;transition:background .15s,transform .15s}
+.setpoint button.press{background:var(--ice-500);color:var(--navy-950);transform:scale(.9)}
+.setpoint div{text-align:center}
+.setpoint small{display:block;font-size:11px;color:var(--ice-300);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.setpoint b{font-size:20px}
+.presets{display:flex;gap:6px;margin-top:10px}
+.presets span{flex:1;text-align:center;font-size:11.5px;font-weight:700;padding:7px 4px;border-radius:10px;background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);transition:background .25s,color .25s}
+.presets span.on{background:var(--ice-400);color:var(--navy-950)}
+.spark{height:90px;width:100%;display:block}
+.spark .line{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s ease}
+.spark .area{opacity:0;transition:opacity .8s .9s}
+.seen .spark .line{stroke-dashoffset:0}
+.seen .spark .area{opacity:1}
+.spark-meta{display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,.5);font-weight:600;margin-top:6px}
+.remote-row{display:flex;gap:12px;align-items:center;padding:10px 0}
+.remote-row + .remote-row{border-top:1px solid rgba(255,255,255,.08)}
+.remote-row .ic{flex:none;width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:rgba(34,195,230,.16);color:var(--ice-300)}
+.remote-row svg{width:19px;height:19px}
+.remote-row b{display:block;font-size:14px}
+.remote-row span{font-size:12px;color:rgba(255,255,255,.6)}
+.scr-notif{position:absolute;z-index:2;left:10px;right:10px;top:42px;display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:16px;background:rgba(230,245,252,.96);color:var(--ink);box-shadow:0 12px 30px -8px rgba(0,0,0,.5);transform:translateY(-140%);opacity:0;transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .3s}
+.scr-notif.on{transform:none;opacity:1}
+.scr-notif .ic{flex:none;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--navy-900);color:var(--ice-300)}
+.scr-notif svg{width:17px;height:17px}
+.scr-notif b{display:block;font-size:12.5px}
+.scr-notif span{font-size:12px;color:var(--ink-2)}
+/* Callouts: a card with an arrow pointing at the highlighted part of the screen */
+.app-callouts{position:absolute;inset:0;pointer-events:none}
+.callout{position:absolute;top:0;width:250px;padding:16px 18px;border-radius:16px;background:var(--navy-900);color:#fff;box-shadow:var(--shadow-lg);opacity:0;transform:translateX(-18px) scale(.94);transition:opacity .3s,transform .45s cubic-bezier(.2,.8,.2,1)}
+.callout.on{opacity:1;transform:none}
+.callout b{display:flex;align-items:center;gap:10px;font-size:17px;margin-bottom:4px}
+.callout b em{font-style:normal;font-size:12px;font-weight:800;color:var(--navy-950);background:var(--ice-400);border-radius:7px;padding:2px 7px}
+.callout span{display:block;font-size:14.5px;line-height:1.5;color:rgba(255,255,255,.75)}
+.callout .arrow{position:absolute;left:100%;top:50%;width:var(--reach,60px);height:2px;margin-top:-1px;background:var(--ice-400);transform-origin:left;transform:scaleX(0);transition:transform .35s .2s ease-out}
+.callout .arrow::after{content:"";position:absolute;right:0;top:50%;width:10px;height:10px;margin-top:-6px;border-top:2px solid var(--ice-400);border-right:2px solid var(--ice-400);transform:rotate(45deg)}
+.callout.on .arrow{transform:scaleX(1)}
+@media (prefers-reduced-motion:reduce){.scr-page,.callout,.callout .arrow,.dial,.spark .line{transition:none}}
+
+/* Audience */
+.audience{background:var(--frost)}
+.aud-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.aud{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 18px;text-align:center;transition:transform .15s,box-shadow .15s}
+.aud:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.aud .emo{font-size:34px;line-height:1;margin-bottom:12px}
+.aud b{display:block;font-size:15.5px}
+.aud span{display:block;font-size:13px;color:var(--ink-3);font-weight:600;margin-top:4px}
+
+/* How it works */
+.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.how-img{border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+.how-img img{width:100%;aspect-ratio:800/560;object-fit:cover}
+.how p{color:var(--ink-2);margin-bottom:16px}
+.serbia{display:inline-flex;align-items:center;gap:10px;margin-top:10px;padding:10px 16px;border-radius:12px;background:var(--navy-900);color:#fff;font-weight:700;font-size:14px}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gallery figure{border-radius:16px;overflow:hidden;position:relative;aspect-ratio:4/3;background:var(--frost)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gallery figure:hover img{transform:scale(1.05)}
+.gallery figcaption{position:absolute;left:10px;bottom:10px;background:rgba(10,26,47,.82);color:#fff;font-size:12.5px;font-weight:700;padding:5px 10px;border-radius:999px}
+
+/* Testimonials */
+.testi{background:var(--navy-950);color:#fff}
+.testi .lead{color:rgba(255,255,255,.7)}
+.rating{display:inline-flex;align-items:center;gap:10px;margin-top:18px;color:#fbbf24;font-weight:800}
+.rating span{color:rgba(255,255,255,.8);font-weight:600}
+.t-grid{columns:3 320px;column-gap:20px}
+.t-card{break-inside:avoid;margin-bottom:20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:24px}
+.t-card .stars{color:#fbbf24;letter-spacing:2px;font-size:15px;margin-bottom:10px}
+.t-card p{color:rgba(255,255,255,.85);font-size:15px}
+.t-card .who{display:flex;align-items:center;gap:12px;margin-top:18px}
+.t-card .av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--ice-400),var(--navy-700));display:grid;place-items:center;font-weight:800;color:var(--navy-950)}
+.t-card .who b{display:block;font-size:15px}
+.t-card .who small{color:rgba(255,255,255,.55);font-weight:600}
+.t-card.featured{background:linear-gradient(160deg,rgba(34,195,230,.16),rgba(255,255,255,.03));border-color:rgba(34,195,230,.35)}
+.t-card .facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.t-card .facts span{font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;background:rgba(34,195,230,.14);color:var(--ice-300)}
+
+/* FAQ */
+.faq-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.faq details{border:1px solid var(--line);border-radius:16px;background:#fff;margin-bottom:12px;transition:box-shadow .15s}
+.faq details[open]{box-shadow:var(--shadow);border-color:#c8e6f0}
+.faq summary{cursor:pointer;list-style:none;padding:20px 22px;font-weight:700;font-size:17px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;background:var(--ice-100);color:var(--navy-700);display:grid;place-items:center;font-size:20px;font-weight:700;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 22px 22px;color:var(--ink-2)}
+.help-card{background:var(--navy-900);color:#fff;border-radius:var(--radius);padding:30px;margin-top:28px}
+.help-card p{color:rgba(255,255,255,.75);margin:10px 0 20px}
+
+/* Contact */
+.contact{background:var(--frost)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:start}
+.c-list{list-style:none;display:grid;gap:14px;margin-top:30px}
+.c-item{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;transition:box-shadow .15s,transform .15s}
+a.c-item:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.c-item .ci{flex:none;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--ice-100);color:var(--navy-700)}
+.c-item .ci svg{width:22px;height:22px}
+.c-item .ci.v{background:#efedff;color:var(--viber)}
+.c-item small{display:block;font-size:12.5px;color:var(--ink-3);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.c-item b{font-size:17px}
+.form{background:#fff;border:1px solid var(--line);border-radius:22px;padding:34px;box-shadow:var(--shadow)}
+.form h3{font-size:24px;margin-bottom:6px}
+.form > p{color:var(--ink-2);margin-bottom:24px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f-field{margin-bottom:14px}
+.f-field label{display:block;font-size:13.5px;font-weight:700;margin-bottom:6px;color:var(--ink-2)}
+.f-field input,.f-field select,.f-field textarea{width:100%;font:inherit;font-size:16px;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:var(--frost);color:var(--ink);outline:none;transition:border .15s,background .15s}
+.f-field input:focus,.f-field select:focus,.f-field textarea:focus{border-color:var(--ice-500);background:#fff}
+.f-field textarea{min-height:110px;resize:vertical}
+.form .small{font-size:13px;color:var(--ink-3);margin-top:12px;text-align:center}
+.form-ok{display:none;margin-top:14px;padding:14px;border-radius:12px;background:#ecfdf3;color:#166534;font-weight:600}
+
+/* Footer */
+.footer{background:var(--navy-950);color:rgba(255,255,255,.7);padding:64px 0 100px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.footer h4{color:#fff;font-size:15px;margin-bottom:14px}
+.footer ul{list-style:none;display:grid;gap:9px;font-size:15px}
+.footer a:hover{color:#fff}
+.socials{display:flex;gap:10px;margin-top:18px}
+.socials a{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.07);display:grid;place-items:center;color:#fff}
+.socials a:hover{background:rgba(34,195,230,.25)}
+.socials svg{width:18px;height:18px}
+.f-bottom{border-top:1px solid rgba(255,255,255,.08);margin-top:44px;padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px}
+
+/* Mobile action bar */
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(6,17,31,.96);backdrop-filter:blur(10px);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:8px;grid-template-columns:1fr 1fr 1.2fr;border-top:1px solid rgba(255,255,255,.08)}
+.mbar a{display:flex;align-items:center;justify-content:center;gap:6px;border-radius:12px;padding:12px 6px;font-weight:700;font-size:14px;color:#fff}
+.mbar svg{width:18px;height:18px}
+.mbar .call{background:rgba(255,255,255,.1)}
+.mbar .vib{background:var(--viber)}
+.mbar .req{background:var(--ice-500);color:var(--navy-950)}
+
+/* Reveal */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* Extra motion: staggered reveals, hero entrance, snow, counters, shimmer, card spotlight */
+.js .reveal{transition-delay:var(--d,0s)}
+.scroll-progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:70;background:linear-gradient(90deg,var(--ice-400),var(--ice-500),#bff3ff);transform-origin:left;transform:scaleX(0);pointer-events:none;box-shadow:0 0 12px rgba(79,214,242,.7)}
+.hero-snow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.js .hero .container > div:first-child > *{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.js .hero .container > div:first-child > :nth-child(2){transition-delay:.12s}
+.js .hero .container > div:first-child > :nth-child(3){transition-delay:.26s}
+.js .hero .container > div:first-child > :nth-child(4){transition-delay:.4s}
+.js .hero .container > div:first-child > :nth-child(5){transition-delay:.54s}
+.js .hero-visual{opacity:0;transform:translateY(30px) scale(.96);transition:opacity .9s ease .3s,transform 1.1s cubic-bezier(.2,.8,.2,1) .3s}
+.js .hero.hero-in .container > div:first-child > *,.js .hero.hero-in .hero-visual{opacity:1;transform:none}
+@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -9px}}
+.temp-chip.two{animation:floaty 5s ease-in-out infinite}
+.temp-chip.one{animation:floaty 6s ease-in-out -2.5s infinite}
+.btn-primary{position:relative;overflow:hidden;isolation:isolate}
+.btn-primary::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.6) 50%,transparent 70%);transform:translateX(-120%);animation:shine 5s ease-in-out infinite}
+@keyframes shine{0%,65%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+.hero .btn-primary{animation:pulse 2.8s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 10px 30px -10px rgba(34,195,230,.7),0 0 0 0 rgba(79,214,242,.5)}70%,100%{box-shadow:0 10px 30px -10px rgba(34,195,230,.7),0 0 0 16px rgba(79,214,242,0)}}
+.brand:hover img{animation:spin 1.2s cubic-bezier(.2,.8,.2,1)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.js .reveal .eyebrow::before{width:0;transition:width .7s cubic-bezier(.2,.8,.2,1) calc(var(--d,0s) + .35s)}
+.js .reveal.in .eyebrow::before{width:22px}
+.stat b .cnt{font:inherit;color:inherit;font-variant-numeric:tabular-nums}
+/* Steps: the number badge pops in after its card */
+.js .step.reveal .num{opacity:0;transform:scale(.4) rotate(-25deg);transition:opacity .4s,transform .7s cubic-bezier(.3,1.7,.5,1);transition-delay:calc(var(--d,0s) + .25s)}
+.js .step.reveal.in .num{opacity:1;transform:none}
+/* Compare: rows slide in one by one, the check marks pop */
+.compare tbody tr:nth-child(1){--r:.2s}.compare tbody tr:nth-child(2){--r:.28s}.compare tbody tr:nth-child(3){--r:.36s}
+.compare tbody tr:nth-child(4){--r:.44s}.compare tbody tr:nth-child(5){--r:.52s}.compare tbody tr:nth-child(6){--r:.6s}
+.js .reveal .compare tbody tr{opacity:0;transform:translateX(26px);transition:opacity .5s ease var(--r),transform .6s cubic-bezier(.2,.8,.2,1) var(--r)}
+.js .reveal.in .compare tbody tr{opacity:1;transform:none}
+.yes{display:inline-block}
+.js .reveal .compare .yes{transform:scale(0);transition:transform .5s cubic-bezier(.3,1.9,.5,1) calc(var(--r) + .3s)}
+.js .reveal.in .compare .yes{transform:none}
+/* Cards: zoom in instead of a plain slide */
+.js .aud.reveal:not(.in){transform:translateY(26px) scale(.88)}
+.js .t-card.reveal:not(.in){transform:translateY(34px) scale(.95)}
+.aud .emo{display:inline-block}
+.aud:hover .emo{animation:wiggle .7s ease}
+@keyframes wiggle{0%,100%{transform:none}25%{transform:rotate(-14deg) scale(1.15)}50%{transform:rotate(10deg) scale(1.15)}75%{transform:rotate(-5deg)}}
+/* Gallery: an ice-blue curtain lifts off each photo, which settles from a slight zoom
+   (a curtain rather than clip-path, which would hide the figure from the IntersectionObserver) */
+.js .gallery figure.reveal:not(.in){transform:none}
+.js .gallery figure.reveal::before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(160deg,var(--ice-300),var(--ice-500) 55%,var(--navy-700));transform-origin:top;transition:transform 1s cubic-bezier(.7,0,.2,1) calc(var(--d,0s) + .1s)}
+.js .gallery figure.reveal.in::before{transform:scaleY(0)}
+.js .gallery figure.reveal img{transform:scale(1.25);transition:transform 1.5s cubic-bezier(.2,.8,.2,1) var(--d,0s)}
+.js .gallery figure.reveal.in img{transform:none}
+.js .gallery figure.reveal.in:hover img{transform:scale(1.05);transition-duration:.4s;transition-delay:0s}
+/* Two-column sections: the halves slide in from opposite sides (desktop only, so phones never scroll sideways) */
+@media (min-width:921px){
+  .js :is(.compare-wrap,.how-grid,.faq-wrap,.contact-grid) > .reveal:first-child:not(.in){transform:translateX(-44px)}
+  .js :is(.compare-wrap,.how-grid,.faq-wrap,.contact-grid) > .reveal:last-child:not(.in){transform:translateX(44px)}
+}
+/* Calculator: changed values bounce */
+.btu{transform-origin:left center}
+.bump{animation:bump .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes bump{40%{transform:scale(1.07)}}
+.result-grid div.bump{animation:bump .5s cubic-bezier(.3,1.6,.5,1),flash .9s ease}
+@keyframes flash{0%{background:var(--ice-100);border-color:var(--ice-400)}}
+/* Cursor spotlight on cards */
+.spot{position:relative;overflow:hidden}
+.spot::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),rgba(34,195,230,.16),transparent 65%);opacity:0;transition:opacity .3s}
+.spot:hover::after{opacity:1}
+@media (prefers-reduced-motion:reduce){
+  .btn-primary::after,.temp-chip,.hero .btn-primary,.aud:hover .emo,.brand:hover img,.bump{animation:none}
+  .js .hero .container > div:first-child > *,.js .hero-visual,.js .step.reveal .num,.js .reveal .compare tbody tr,.js .reveal .compare .yes,.js .gallery figure.reveal img{opacity:1;transform:none;transition:none}
+  .js .gallery figure.reveal::before{display:none}
+}
+
+/* Ice intro */
+#intro{display:none}
+html.intro{overflow:hidden}
+html.intro #intro{display:block;position:fixed;inset:0;z-index:9999;background:#06111f;cursor:pointer;overflow:hidden}
+#intro canvas,#intro .ice-css{position:absolute;inset:0;width:100%;height:100%}
+#intro .ice-css{background:url(img/led.webp) center/cover no-repeat #06111f;background-blend-mode:screen;opacity:0}
+.intro-logo{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;text-align:center;pointer-events:none;color:#fff}
+.intro-logo > *{opacity:0}
+.intro-logo .halo{position:absolute;left:50%;top:50%;width:95vmin;height:95vmin;translate:-50% -50%;border-radius:50%;background:radial-gradient(closest-side,rgba(6,17,31,.88),rgba(6,17,31,.55) 55%,transparent)}
+.intro-logo img{position:relative;width:min(36vmin,280px);aspect-ratio:1;mix-blend-mode:screen}
+.intro-logo .name{position:relative;font-weight:800;font-size:clamp(30px,5.6vmin,58px);letter-spacing:-.02em;line-height:1.1;margin-top:6px;text-shadow:0 2px 20px rgba(6,17,31,.9)}
+.intro-logo .name span{color:var(--ice-400)}
+.intro-logo small{position:relative;margin-top:10px;font-weight:700;font-size:clamp(11px,1.6vmin,14px);letter-spacing:.22em;text-transform:uppercase;color:var(--ice-300);text-shadow:0 2px 14px rgba(6,17,31,.9)}
+
+/* Responsive */
+@media (max-width:1300px){
+  .header-phone{display:none}
+}
+@media (max-width:1080px){
+  .nav{display:none}
+  .header-phone{display:none}
+  .menu-btn{display:block}
+  .nav.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--navy-950);padding:8px 24px 20px;border-top:1px solid rgba(255,255,255,.08)}
+  .nav.open a{padding:12px 0;width:100%;font-size:17px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .aud-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:920px){
+  section{padding:72px 0}
+  .hero{padding:120px 0 80px}
+  /* minmax(0,1fr) lets the column shrink below its content's natural width, so the page never gets wider than the phone */
+  .hero .container,.compare-wrap,.calc-box,.app-grid,.how-grid,.faq-wrap,.contact-grid{grid-template-columns:minmax(0,1fr)}
+  .hero-visual{max-width:560px;margin:20px auto 0;width:100%}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.1)}
+  .steps-grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .app-grid{gap:18px;align-content:center}
+  .app-copy{text-align:center}
+  .app-copy .lead,.app-steps,.app-bar{display:none}
+  .app-copy h2{font-size:26px}
+  .app-copy .eyebrow{margin-bottom:6px}
+  .app-phone{flex-direction:column;align-items:center}
+  .app-callouts{position:relative;inset:auto;width:100%;max-width:420px;height:112px;margin-top:20px}
+  .callout{left:0;right:0;width:auto;padding:13px 16px;transform:translateY(14px) scale(.96)}
+  .callout b{font-size:16px}
+  .callout span{font-size:14px}
+  .callout .arrow{left:50%;top:auto;bottom:100%;width:2px;height:16px;margin:0 0 0 -1px;transform-origin:bottom;transform:scaleY(0)}
+  .callout .arrow::after{right:auto;left:50%;top:0;margin:0 0 0 -6px;transform:rotate(-45deg)}
+  .callout.on .arrow{transform:scaleY(1)}
+}
+@media (max-width:640px){
+  .container{padding:0 16px}
+  .header .container{height:66px}
+  .header-cta .btn{display:none}
+  .nav.open{top:66px}
+  .brand img{width:38px;height:38px}
+  .hero-ctas .btn{width:100%}
+  .temp-chip.one{left:-6px;bottom:-30px}
+  .temp-chip.two{right:-6px;top:-30px}
+  .temp-chip{padding:9px 12px}
+  .temp-chip b{font-size:17px}
+  .calc-form,.calc-result,.form{padding:24px 18px}
+  .dims{gap:8px}
+  .input-unit input{font-size:16px;padding:12px 30px 12px 10px}
+  .input-unit span{right:10px}
+  .seg label{font-size:13px;padding:10px 4px}
+  .aud-grid{grid-template-columns:1fr 1fr}
+  .f-row{grid-template-columns:1fr}
+  .result-grid{grid-template-columns:1fr 1fr}
+  .compare{font-size:14px}
+  .compare th,.compare td{padding:12px 10px}
+  #aplikacija{--hh:66px}
+  .app-stage{height:calc(100vh - 130px);height:calc(100svh - 130px)}
+  .f-grid{grid-template-columns:1fr}
+  .mbar{display:grid}
+}
+/* Narrow phones (iPhone SE / mini): tighten the comparison table and the calculator so they fit */
+@media (max-width:400px){
+  .compare{font-size:13px}
+  .compare th,.compare td{padding:10px 7px}
+  .compare thead th{font-size:10.5px;letter-spacing:.04em}
+  .compare td{overflow-wrap:anywhere}
+  .calc-form,.calc-result{padding:22px 14px}
+  .seg{gap:6px}
+  .seg label{font-size:12.5px;padding:10px 3px;overflow-wrap:anywhere}
+  .seg label small{font-size:11px}
+  .input-unit input{padding:12px 26px 12px 9px}
+  .input-unit span{right:8px}
+  .result-grid{gap:8px}
+  .result-grid div{padding:12px}
+  .result-grid b{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<!-- ICE INTRO (shown once per session, see the script in <head>) -->
+<div id="intro" aria-hidden="true">
+  <canvas></canvas>
+  <div class="ice-css"></div>
+  <div class="intro-logo">
+    <div class="halo"></div>
+    <img alt="">
+    <div class="name">°Cooliraj<span>Sačuvaj</span></div>
+    <small>Pametne rashladne komore</small>
+  </div>
+</div>
+<script>
+// Ice intro: frost grows in from the screen edges (WebGL), the logo appears, then the ice pulls back to the edges
+(() => {
+  const root = document.getElementById('intro');
+  let resolve; window.introDone = new Promise(r => resolve = r);
+  if (!document.documentElement.classList.contains('intro')) { resolve(); return; }
+
+  const $ = s => root.querySelector(s);
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const load = src => new Promise((ok, fail) => { const i = new Image(); i.onload = () => ok(i); i.onerror = fail; i.src = src; });
+  const anim = (el, frames, opts) => el.animate(frames, {fill:'forwards', ...opts});
+  let done = false;
+  const finish = () => { if (done) return; done = true; document.documentElement.classList.remove('intro'); root.remove(); resolve(); };
+  const skip = () => { if (!done) root.animate([{opacity:1}, {opacity:0}], {duration:300}).onfinish = finish; };
+  root.addEventListener('click', skip);
+  addEventListener('keydown', skip, {once:true});
+
+  const FRAG = `
+    #ifdef GL_FRAGMENT_PRECISION_HIGH
+    precision highp float;
+    #else
+    precision mediump float;
+    #endif
+    uniform sampler2D uTex; uniform vec2 uRes, uImg; uniform float uP, uReveal;
+    float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+    float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+1.),f.x),f.y);}
+    float fbm(vec2 p){return .5*n(p)+.25*n(p*2.03)+.125*n(p*4.01)+.125*n(p*8.07);}
+    void main(){
+      vec2 s=gl_FragCoord.xy/uRes;
+      float k=max(uRes.x/uImg.x,uRes.y/uImg.y);
+      vec3 f=texture2D(uTex,(s-.5)*uRes/(uImg*k)+.5).rgb;            // background-size: cover
+      vec2 d=min(s,1.-s)*uRes;
+      float e=min(d.x,d.y)/(.5*min(uRes.x,uRes.y));                   // 0 at the edges, 1 in the middle
+      float lum=dot(f,vec3(.299,.587,.114));
+      float at=e*.85+(fbm(gl_FragCoord.xy/180.)-.5)*.45-lum*.3+.12;   // when this pixel freezes; bright crystals lead
+      float a=clamp((uP-at)/.08,0.,1.);
+      vec3 navy=vec3(.0235,.0667,.1216);
+      vec3 col=1.-(1.-navy)*(1.-f*a);                                 // same as CSS screen blend
+      col+=vec3(.35,.85,1.)*a*(1.-a)*4.*(.15+lum*.5);                 // glow on the moving front
+      float alpha=mix(1.,a,uReveal);                                  // while pulling back, ice-free areas show the site
+      gl_FragColor=vec4(col*alpha,alpha);
+    }`;
+
+  function glFreeze(img) {
+    const c = $('canvas'), gl = c.getContext('webgl');
+    if (!gl) return null;
+    const dpr = Math.min(devicePixelRatio || 1, 1.5);
+    c.width = innerWidth * dpr; c.height = innerHeight * dpr;
+    const shader = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; };
+    const prog = gl.createProgram();
+    gl.attachShader(prog, shader(gl.VERTEX_SHADER, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}'));
+    gl.attachShader(prog, shader(gl.FRAGMENT_SHADER, FRAG));
+    gl.bindAttribLocation(prog, 0, 'p');
+    gl.linkProgram(prog);
+    if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) return null;
+    gl.useProgram(prog);
+    gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 3,-1, -1,3]), gl.STATIC_DRAW);
+    gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+    gl.bindTexture(gl.TEXTURE_2D, gl.createTexture());
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, img);
+    [gl.TEXTURE_WRAP_S, gl.TEXTURE_WRAP_T].forEach(p => gl.texParameteri(gl.TEXTURE_2D, p, gl.CLAMP_TO_EDGE));
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    const u = name => gl.getUniformLocation(prog, name);
+    gl.uniform2f(u('uRes'), c.width, c.height);
+    gl.uniform2f(u('uImg'), img.naturalWidth, img.naturalHeight);
+    gl.viewport(0, 0, c.width, c.height);
+    const uP = u('uP'), uReveal = u('uReveal');
+    return (p, reveal = 0) => { gl.uniform1f(uP, p); gl.uniform1f(uReveal, reveal); gl.drawArrays(gl.TRIANGLES, 0, 3); };
+  }
+
+  const tween = (ms, fn) => new Promise(ok => {
+    const t0 = performance.now();
+    const step = now => { const k = Math.min(1, (now - t0) / ms); fn(k < .5 ? 2*k*k : 1 - Math.pow(-2*k + 2, 2) / 2); k < 1 ? requestAnimationFrame(step) : ok(); };
+    requestAnimationFrame(step);
+  });
+
+  (async () => {
+    let frost;
+    try {
+      [frost] = await Promise.race([
+        Promise.all([load('img/led.webp'), load('img/pahulja.webp')]),
+        sleep(4000).then(() => { throw new Error('slow'); })
+      ]);
+    } catch (e) { return skip(); }
+    $('.intro-logo img').src = 'img/pahulja.webp';
+    if (done) return;
+
+    // 1. Freeze from the edges inwards
+    const draw = glFreeze(frost);
+    if (draw) await tween(1700, p => draw(-.35 + p * 1.65));
+    else await anim($('.ice-css'), [{opacity:0}, {opacity:1}], {duration:1400}).finished;
+    if (done) return;
+
+    // 2. Logo
+    const [halo, flake, name, tag] = $('.intro-logo').children;
+    anim(halo, [{opacity:0}, {opacity:1}], {duration:600});
+    anim(flake, [{opacity:0, transform:'scale(.45) rotate(-60deg)', filter:'brightness(2.5)'}, {opacity:1, transform:'none', filter:'brightness(1)'}], {duration:950, easing:'cubic-bezier(.2,.8,.2,1)'});
+    await sleep(380);
+    anim(name, [{opacity:0, transform:'translateY(14px)'}, {opacity:1, transform:'none'}], {duration:600, easing:'ease-out'});
+    await sleep(160);
+    anim(tag, [{opacity:0, transform:'translateY(10px)'}, {opacity:1, transform:'none'}], {duration:600, easing:'ease-out'});
+    await sleep(1150);
+    if (done) return;
+
+    // 3. The ice pulls back from the center to the edges and uncovers the site
+    [halo, flake, name, tag].forEach(el => anim(el, [{transform:'scale(1.08)', opacity:0}], {duration:450, easing:'ease-in'}));
+    root.style.background = 'transparent';
+    if (draw) await tween(1500, p => draw(1.3 - p * 1.65, 1));
+    else await anim($('.ice-css'), [{opacity:0}], {duration:900}).finished;
+    finish();
+  })();
+})();
+</script>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="m8 12 3 3 5-6"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9M9 3l3 3 3-3M9 21l3-3 3 3M3 9l3 3-3 3M21 9l-3 3 3 3"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12.6a10 10 0 0 1 14 0M8.5 16.1a5 5 0 0 1 7 0M2 8.8a15 15 0 0 1 20 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15v3M8 18h4"/></symbol>
+  <symbol id="i-viber" viewBox="0 0 24 24" fill="currentColor"><path d="M11.4 1.5C9.1 1.5 4.3 1.9 2.4 3.6 1 5 .5 7.1.4 9.7c-.1 2.6-.2 7.5 4.5 8.8v2c0 .3 0 .7.4.9.4.2.8-.1 1.1-.4l1.9-2.1c2.6.2 4.6-.3 4.8-.3.5-.2 3.5-.6 4-4.6.5-4.1-.2-6.7-1.5-7.9 0 0-1.3-1.8-4.2-2.4 0 0-1.3-.3-2.9-.2h-.1zm.2 1.6h.1c1.4 0 2.5.2 2.5.2 2.5.5 3.5 2 3.5 2 1.1 1 1.6 3.3 1.2 6.8-.4 3.3-2.8 3.5-3.3 3.7-.2.1-2.1.5-4.5.4 0 0-1.8 2.1-2.3 2.7-.1.1-.2.1-.3.1-.1 0-.1-.2-.1-.4v-3.1c-3.9-1.1-3.7-5.2-3.6-7.3.1-2.2.5-3.9 1.6-5 1.6-1.5 5.6-1.8 5.2-1.8zm.4 2.1c-.2 0-.2.3 0 .3 1.5 0 2.7.5 3.6 1.4.9.9 1.3 2.1 1.4 3.6 0 .2.3.2.3 0 0-1.6-.5-2.9-1.5-3.9S13.6 5.2 12 5.2zm-3.4.9c-.2 0-.4 0-.6.2-.5.4-1.1 1-1 1.6.2 1.1 1.2 3.4 3.5 5.4 1.1 1 2.7 2 4.3 2.5.5.2 1.1-.4 1.5-.9.2-.3.2-.6 0-.9-.3-.3-.9-.8-1.4-1.1-.4-.3-.9-.1-1.1.2l-.4.5c-.2.3-.6.2-.6.2-2.7-.7-3.4-3.4-3.4-3.4s0-.4.2-.6l.5-.4c.3-.2.4-.7.2-1.1-.1-.3-.5-.8-.8-1.2-.2-.3-.5-.6-.9-.6v-.4zm3.6.6c-.2 0-.2.3 0 .3.9.1 1.5.4 2 .9.5.5.8 1.2.8 2.1 0 .2.3.2.3 0 0-1-.4-1.8-.9-2.4-.6-.6-1.3-.9-2.2-.9zm.2 1.2c-.2 0-.2.3 0 .3.8.1 1.2.5 1.3 1.3 0 .2.3.2.3 0-.1-1-.6-1.5-1.6-1.6z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-therm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 14.8V4a2 2 0 0 0-4 0v10.8a4 4 0 1 0 4 0z"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-6"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<!-- HEADER -->
+<header class="header" id="top">
+  <div class="container">
+    <a href="#top" class="brand">
+      <img src="img/logo.png" alt="°CoolirajSačuvaj logo" width="44" height="44">
+      <div>°Cooliraj Sačuvaj™<small>Pametne rashladne komore</small></div>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#kako">Kako radi</a>
+      <a href="#kalkulator">Kalkulator</a>
+      <a href="#aplikacija">Aplikacija</a>
+      <a href="#za-koga">Za koga</a>
+      <a href="#utisci">Utisci</a>
+      <a href="#pitanja">Pitanja</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="header-cta">
+      <a class="header-phone" href="tel:+381652059474"><svg><use href="#i-phone"/></svg>065 205 9474</a>
+      <a class="btn btn-primary" href="#kontakt" style="padding:11px 20px;font-size:15px">Zatraži ponudu</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Meni" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div>
+      <div class="badge"><span>Novo</span> Razvijeno i proizvedeno u Srbiji</div>
+      <h1>Rashladna komora od <em>običnog klima uređaja.</em></h1>
+      <p class="sub">°CoolirajSačuvaj uređaj pretvara bilo koji izolovan prostor (podrum, garažu, ostavu) u pametnu hladnjaču do <strong style="color:#fff">+2 °C</strong>. Bez prepravki na klimi, bez troškova održavanja, uz kontrolu preko mobilnog telefona.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#kalkulator"><svg><use href="#i-calc"/></svg>Izračunaj svoju komoru</a>
+        <a class="btn btn-ghost" href="tel:+381652059474"><svg><use href="#i-phone"/></svg>Pozovi 065 205 9474</a>
+      </div>
+      <ul class="hero-checks">
+        <li><svg><use href="#i-check"/></svg>Komora ispod 1.000 €*</li>
+        <li><svg><use href="#i-check"/></svg>Povezivanje za 15 min</li>
+        <li><svg><use href="#i-check"/></svg>Inverter i on/off klime</li>
+      </ul>
+    </div>
+    <div class="hero-visual">
+      <svg class="orbit" viewBox="0 0 560 360" aria-hidden="true">
+        <path id="orbitPath" d="M10 180a270 150 0 1 0 540 0a270 150 0 1 0-540 0"/>
+        <g><circle r="9" fill="rgba(34,195,230,.22)"/><circle r="3.5" fill="#bff3ff"/><animateMotion dur="11s" repeatCount="indefinite"><mpath href="#orbitPath"/></animateMotion></g>
+        <g><circle r="7" fill="rgba(34,195,230,.18)"/><circle r="2.5" fill="#bff3ff"/><animateMotion dur="11s" begin="-5.5s" repeatCount="indefinite"><mpath href="#orbitPath"/></animateMotion></g>
+      </svg>
+      <div class="device" id="device" role="img" aria-label="°CoolirajSačuvaj kontroler sa displejem koji pokazuje temperaturu u komori">
+        <img src="img/uredjaj-off.png" alt="" width="460" height="480">
+        <img class="press" style="--x:62.8%" src="img/uredjaj-on.png" alt="">
+        <img class="press" style="--x:70.4%" src="img/uredjaj-on.png" alt="">
+        <img class="press" style="--x:78.5%" src="img/uredjaj-on.png" alt="">
+        <div class="lcd-bloom"></div>
+        <div class="lcd"><svg id="lcd" viewBox="0 0 250 100"></svg></div>
+        <div class="snow-glow"></div>
+      </div>
+      <div class="temp-chip two">
+        <div class="ic"><svg><use href="#i-therm"/></svg></div>
+        <div><small><span class="live-dot"></span>Komora · uživo</small><b>3,8 °C</b></div>
+      </div>
+      <div class="temp-chip one">
+        <div class="ic"><svg><use href="#i-wifi"/></svg></div>
+        <div><small>Kontrola preko</small><b>mobilne aplikacije</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat"><b><span class="cnt" data-from="0">5</span>–<span class="cnt" data-from="0">10</span>×</b><span>jeftinije od industrijske komore</span></div>
+      <div class="stat"><b>do +<span class="cnt" data-from="25">2</span> °C</b><span>stabilna temperatura cele godine</span></div>
+      <div class="stat"><b><span class="cnt" data-from="0">15</span> min</b><span>za povezivanje sa klimom</span></div>
+      <div class="stat"><b><span class="cnt" data-from="500">0</span> €</b><span>troškova održavanja</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- STEPS -->
+<section class="steps" id="kako">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">Kako do komore</div>
+      <h2>Sopstvena hladnjača u 3 koraka</h2>
+      <p class="lead">Ne treba vam skupa industrijska oprema. Treba vam izolovan prostor, obična klima i naš uređaj.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step reveal">
+        <div class="num">01</div>
+        <h3>Izolujte prostor</h3>
+        <p>Iskoristite deo podruma, garaže ili pomoćnog objekta. Izolujte ga dostupnim materijalima: stiropor, stirodur ili kamena vuna.</p>
+        <div class="tip">Dobra izolacija i vrata koja dobro dihtuju su ključ za nisku potrošnju i stabilnu temperaturu.</div>
+      </div>
+      <div class="step reveal">
+        <div class="num">02</div>
+        <h3>Ugradite klimu</h3>
+        <p>Lokalni instalater ugrađuje običnu kućnu klimu, isto kao u dnevnoj sobi. Radi sa svim inverter i on/off split klimama, kao i sa prozorskim klimama.</p>
+        <div class="tip">Ne znate koju jačinu klime da uzmete? Pogledajte kalkulator ispod ili nas pozovite.</div>
+      </div>
+      <div class="step reveal">
+        <div class="num">03</div>
+        <h3>Povežite °CoolirajSačuvaj</h3>
+        <p>Sami, uz instalatera ili uz našeg tehničara, za najviše 15 minuta. Unesite WiFi šifru, uključite klimu i komora je spremna.</p>
+        <div class="tip hot">U promotivnom periodu ugradnja je besplatna.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section id="poredjenje">
+  <div class="container compare-wrap">
+    <div class="reveal">
+      <div class="eyebrow">Zašto mi</div>
+      <h2>Prava hladnjača, bez industrijske cene</h2>
+      <p class="lead">Industrijske rashladne komore koštaju preko 10.000 €, troše mnogo struje i zahtevaju servis. Naše rešenje koristi opremu koju već svako može da kupi i servisira.</p>
+      <ul class="compare-points">
+        <li><svg><use href="#i-check"/></svg>Bez sečenja, lemljenja i prepravki na klimi. Kad skinete uređaj, klima opet radi kao pre.</li>
+        <li><svg><use href="#i-check"/></svg>Kompresor radi manje nego u stanu, zahvaljujući dobroj izolaciji.</li>
+        <li><svg><use href="#i-check"/></svg>Besplatna tehnička podrška tokom izrade komore.</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <table class="compare">
+        <thead><tr><th></th><th class="us">°CoolirajSačuvaj</th><th>Industrijska komora</th></tr></thead>
+        <tbody>
+          <tr><td>Ukupna cena komore</td><td class="us">ispod 1.000 €*</td><td>10.000 € i više</td></tr>
+          <tr><td>Održavanje</td><td class="us"><span class="yes">✓</span> Bez troškova</td><td><span class="no">✕</span> Redovan servis</td></tr>
+          <tr><td>Potrošnja struje</td><td class="us"><span class="yes">✓</span> Niska (inverter)</td><td><span class="no">✕</span> Visoka</td></tr>
+          <tr><td>Rezervni delovi</td><td class="us"><span class="yes">✓</span> Svuda dostupni</td><td><span class="no">✕</span> Specijalizovani</td></tr>
+          <tr><td>Ugradnja</td><td class="us"><span class="yes">✓</span> Lokalni instalater</td><td><span class="no">✕</span> Specijalizovana firma</td></tr>
+          <tr><td>Mobilna aplikacija</td><td class="us"><span class="yes">✓</span> Uključena</td><td>Retko / doplata</td></tr>
+        </tbody>
+      </table>
+      <p class="footnote">* U procenu su uključeni izolacioni materijal, klima uređaj i °CoolirajSačuvaj uređaj, za manju komoru. Konačna cena zavisi od veličine prostora.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc" id="kalkulator">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Kalkulator</div>
+      <h2>Koja klima vam je potrebna?</h2>
+      <p class="lead">Unesite dimenzije prostora i dobijte okvirnu preporuku jačine klime i potrebne izolacije. Tačan proračun radimo besplatno, za vaš konkretan prostor.</p>
+    </div>
+    <div class="calc-box reveal">
+      <form class="calc-form" id="calcForm" onsubmit="return false">
+        <div class="field">
+          <span class="label">Dimenzije prostora (unutrašnje)</span>
+          <div class="dims">
+            <div class="input-unit"><input type="number" id="cL" min="0.5" max="20" step="0.1" value="3" inputmode="decimal" aria-label="Dužina u metrima"><span>m</span><small>Dužina</small></div>
+            <div class="input-unit"><input type="number" id="cW" min="0.5" max="20" step="0.1" value="2.5" inputmode="decimal" aria-label="Širina u metrima"><span>m</span><small>Širina</small></div>
+            <div class="input-unit"><input type="number" id="cH" min="1" max="6" step="0.1" value="2.4" inputmode="decimal" aria-label="Visina u metrima"><span>m</span><small>Visina</small></div>
+          </div>
+        </div>
+        <div class="field">
+          <span class="label">Željena temperatura</span>
+          <div class="seg">
+            <input type="radio" name="temp" id="t1" value="1.25"><label for="t1">0–2 °C<small>meso, mleko</small></label>
+            <input type="radio" name="temp" id="t2" value="1" checked><label for="t2">3–5 °C<small>voće, povrće</small></label>
+            <input type="radio" name="temp" id="t3" value="0.8"><label for="t3">6–10 °C<small>vino, pivo</small></label>
+          </div>
+        </div>
+        <div class="field">
+          <span class="label">Gde se nalazi prostor?</span>
+          <div class="seg">
+            <input type="radio" name="loc" id="l1" value="0.85"><label for="l1">Podrum<small>ukopan</small></label>
+            <input type="radio" name="loc" id="l2" value="1" checked><label for="l2">Garaža / objekat<small>u hladu</small></label>
+            <input type="radio" name="loc" id="l3" value="1.3"><label for="l3">Na suncu<small>limeni krov i sl.</small></label>
+          </div>
+        </div>
+        <div class="field" style="margin-bottom:0">
+          <span class="label">Izolacija</span>
+          <div class="seg">
+            <input type="radio" name="ins" id="i1" value="1" checked><label for="i1">Planiram dobru<small>10 cm i više</small></label>
+            <input type="radio" name="ins" id="i2" value="1.25"><label for="i2">Postojeća / tanja<small>5–8 cm</small></label>
+          </div>
+        </div>
+      </form>
+      <div class="calc-result" aria-live="polite">
+        <div class="result-top"><span class="label">Preporučena klima</span></div>
+        <div class="btu" id="rBtu">12.000<small>BTU</small></div>
+        <p class="btu-note" id="rNote">Standardna klima od 3,5 kW</p>
+        <div class="warn" id="rWarn">Za ovako velik prostor preporučujemo jaču klimu ili dva uređaja. Pozovite nas za besplatan proračun.</div>
+        <div class="result-grid">
+          <div><span>Zapremina</span><b id="rVol">18 m³</b></div>
+          <div><span>Površina za izolaciju</span><b id="rArea">42 m²</b></div>
+          <div><span>Stirodur (XPS)</span><b id="rXps">8–10 cm</b></div>
+          <div><span>Stiropor (EPS)</span><b id="rEps">12–15 cm</b></div>
+        </div>
+        <a class="btn btn-dark btn-block" href="#kontakt" id="calcCta">Pošalji ove podatke i dobij ponudu <svg><use href="#i-arrow"/></svg></a>
+        <p class="disclaimer">Proračun je okviran i služi za orijentaciju. Tačna jačina klime zavisi od vrata, izolacije poda, količine robe i spoljne temperature.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APP -->
+<section id="aplikacija">
+  <div class="app-track" id="appTrack">
+    <div class="app-stage">
+      <div class="container app-grid">
+        <div class="app-copy">
+          <div class="eyebrow">Mobilna aplikacija</div>
+          <h2>Vaša komora uvek u vašem džepu</h2>
+          <p class="lead">Uređaj ima WiFi i posebno razvijenu aplikaciju. Sve bitne parametre pratite i menjate sa bilo kog mesta na svetu.</p>
+          <ol class="app-steps" id="appSteps">
+            <li class="on"><svg><use href="#i-therm"/></svg>Temperatura uživo</li>
+            <li><svg><use href="#i-snow"/></svg>Zadajte temperaturu</li>
+            <li><svg><use href="#i-chart"/></svg>Istorija i grafikoni</li>
+            <li><svg><use href="#i-globe"/></svg>Sa bilo kog mesta</li>
+          </ol>
+          <div class="app-bar"><i id="appBar"></i></div>
+        </div>
+        <div class="app-phone" id="appPhone">
+          <div class="phone-wrap">
+            <div class="phone" aria-hidden="true">
+              <div class="screen">
+                <div class="scr-notif"><div class="ic"><svg><use href="#i-snow"/></svg></div><div><b>°CoolirajSačuvaj · sada</b><span>Komora: 3,0 °C, sve je u redu ✓</span></div></div>
+                <div class="scr-page">
+                  <div class="scr-head"><span>Moja komora</span><span><span class="live-dot"></span>Online</span></div>
+                  <div class="scr-block">
+                    <div class="dial"><div><small>Trenutno</small><b>3,8°</b><small>Celzijus</small></div></div>
+                    <div class="scr-row">
+                      <div class="scr-tile"><small>Kompresor</small><b style="color:#34d399">Miruje</b></div>
+                      <div class="scr-tile"><small>Spolja</small><b>31 °C</b></div>
+                    </div>
+                  </div>
+                  <div class="scr-block">
+                    <small class="scr-label">Zadata temperatura</small>
+                    <div class="setpoint"><button>−</button><div><small>Zadato</small><b>4,0 °C</b></div><button>+</button></div>
+                    <div class="presets"><span>3 °C meso</span><span class="on">4 °C sir</span><span>6 °C zimnica</span></div>
+                  </div>
+                  <div class="scr-block">
+                    <small class="scr-label">Poslednja 24h</small>
+                    <svg class="spark" viewBox="0 0 200 90" preserveAspectRatio="none"><defs><linearGradient id="sg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#4fd6f2" stop-opacity=".45"/><stop offset="1" stop-color="#4fd6f2" stop-opacity="0"/></linearGradient></defs><path class="area" d="M0 20 L15 34 L30 46 L45 52 L60 49 L75 55 L90 50 L105 54 L120 48 L135 53 L150 50 L165 55 L180 51 L200 53 L200 90 L0 90Z" fill="url(#sg)"/><path class="line" pathLength="1" d="M0 20 L15 34 L30 46 L45 52 L60 49 L75 55 L90 50 L105 54 L120 48 L135 53 L150 50 L165 55 L180 51 L200 53" fill="none" stroke="#4fd6f2" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>
+                    <div class="spark-meta"><span>juče 14h</span><span>min 3,6° · max 8,1°</span><span>sada</span></div>
+                  </div>
+                  <div class="scr-block">
+                    <small class="scr-label">Daljinski pristup</small>
+                    <div class="remote-row"><div class="ic"><svg><use href="#i-globe"/></svg></div><div><b>Povezano preko interneta</b><span>Komora kod kuće, vi na putu</span></div></div>
+                    <div class="remote-row"><div class="ic"><svg><use href="#i-bell"/></svg></div><div><b>Obaveštenja uključena</b><span>Javljamo ako temperatura odstupi</span></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="app-callouts">
+            <div class="callout"><b><em>01</em>Temperatura uživo</b><span>Tačna temperatura u komori u svakom trenutku.</span><i class="arrow"></i></div>
+            <div class="callout"><b><em>02</em>Zadajte temperaturu</b><span>Promenite režim jednim dodirom, npr. 3 °C za salamurenje, 6 °C za zimnicu.</span><i class="arrow"></i></div>
+            <div class="callout"><b><em>03</em>Istorija i grafikoni</b><span>Pratite kako se komora ponaša tokom dana i noći.</span><i class="arrow"></i></div>
+            <div class="callout"><b><em>04</em>Sa bilo kog mesta</b><span>Preko interneta, bilo da ste na njivi, pijaci ili na putu.</span><i class="arrow"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="audience" id="za-koga">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">Za koga</div>
+      <h2>Za sve koji čuvaju hranu i piće</h2>
+      <p class="lead">Idealno za domaćinstva i male biznise kojima je industrijska komora preskupa.</p>
+    </div>
+    <div class="aud-grid">
+      <div class="aud reveal"><div class="emo">🍎</div><b>Voće i povrće</b><span>berba, skladištenje</span></div>
+      <div class="aud reveal"><div class="emo">🧀</div><b>Mleko i sir</b><span>mlečni proizvodi</span></div>
+      <div class="aud reveal"><div class="emo">🥩</div><b>Meso</b><span>salamurenje, suvo meso</span></div>
+      <div class="aud reveal"><div class="emo">🥚</div><b>Jaja</b><span>farme i gazdinstva</span></div>
+      <div class="aud reveal"><div class="emo">🍷</div><b>Vino i craft pivo</b><span>vinski podrumi, pubovi</span></div>
+      <div class="aud reveal"><div class="emo">💐</div><b>Cveće</b><span>proizvodnja i prodaja</span></div>
+      <div class="aud reveal"><div class="emo">🏡</div><b>Seoski turizam</b><span>etno kuće, salaši</span></div>
+      <div class="aud reveal"><div class="emo">🍽️</div><b>Restorani</b><span>kafane, ketering</span></div>
+      <div class="aud reveal"><div class="emo">🛒</div><b>Lokalne prodavnice</b><span>piljarnice, mešovita roba</span></div>
+      <div class="aud reveal"><div class="emo">🎣</div><b>Lovci i alasi</b><span>lovački domovi</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="tehnologija">
+  <div class="container how-grid">
+    <div class="how-img reveal">
+      <img src="img/sema.jpg" alt="Šema rada °CoolirajSačuvaj uređaja" width="900" height="630" loading="lazy">
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">Tehnologija</div>
+      <h2>Kako uređaj radi?</h2>
+      <p style="margin-top:18px">Kućne klime su fabrički podešene da hlade najniže do +18 °C. To ograničenje nije tehničko, već ga je postavio proizvođač.</p>
+      <p>°CoolirajSačuvaj elektronski menja način rada klime, pa ona dobro izolovan prostor hladi do temperatura bliskih 0 °C (preporučeno do +2 °C).</p>
+      <p>Na klimi se ništa ne seče, ne prespaja i ne leme se dodatne komponente. Kada uređaj skinete, klima se za nekoliko minuta vraća u normalan rad.</p>
+      <div class="serbia"><svg width="18" height="18" style="color:var(--ice-300)"><use href="#i-snow"/></svg>Uređaj je osmišljen i u potpunosti razvijen u Srbiji</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Iz prakse</div>
+      <h2>Tipične instalacije</h2>
+    </div>
+    <div class="gallery">
+      <figure class="reveal"><img loading="lazy" src="img/galerija-1.jpg" width="720" height="540" alt="Instalacija °CoolirajSačuvaj uređaja"><figcaption>Komora u garaži</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="img/galerija-2.jpg" width="720" height="540" alt="Klima uređaj u rashladnoj komori"><figcaption>Klima u komori</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="img/galerija-3.jpg" width="720" height="540" alt="Povezan °CoolirajSačuvaj uređaj"><figcaption>Povezan uređaj</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="img/galerija-4.jpg" width="720" height="540" alt="Rashladna komora u radu"><figcaption>Komora u radu</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi" id="utisci">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Reč korisnika</div>
+      <h2>Šta kažu naši korisnici</h2>
+      <div class="rating">★★★★★ <span>Poljoprivrednici, pubovi i domaćinstva širom Srbije i Crne Gore</span></div>
+    </div>
+    <div class="t-grid">
+      <div class="t-card featured reveal">
+        <div class="stars">★★★★★</div>
+        <p>„Uređaj sam povezao na polovnu klimu, izolovao deo garaže i dobio jeftinu rashladnu komoru. Radi već dve godine bez ikakvih problema. Kada salamurim meso držim je na 3 °C, inače na 6–7 °C (piće, sir, zimnica, krompir, luk). Preko aplikacije pratim i menjam temperaturu. Za svaku preporuku.”</p>
+        <div class="facts"><span>2 godine rada</span><span>+700–800 din/mes. struja</span><span>3–7 °C</span></div>
+        <div class="who"><div class="av">M</div><div><b>Miroslav Đokić</b><small>Loznica</small></div></div>
+      </div>
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>„Kupili smo uređaj za hladnjaču za točeno pivo u burićima. Zidovi i plafon su od 70 mm sendvič panela, klima Bergen Apollo 12k. Hladnjača već mesec dana drži 4–5 °C. Pivo ostaje savršeno hladno i u najtoplijim letnjim danima. Hladnjača industrijskog tipa, uz mnogo manji budžet.”</p>
+        <div class="who"><div class="av">R</div><div><b>Ruslan</b><small>Beograd</small></div></div>
+      </div>
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>„Uređaj je pretvorio klimu u rashladnu komoru za mlečne proizvode. Na inverter klimi drži stabilnih 4 °C, a račun za struju se nije značajno povećao. Bez velikih troškova i skupih komora, koje su za nas male poljoprivrednike ogromna investicija.”</p>
+        <div class="who"><div class="av">M</div><div><b>Milan</b><small>Danilovgrad, Crna Gora</small></div></div>
+      </div>
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>„Komunikacija i usluga su iznad očekivanja. Dobili smo ključne savete za prostoriju u odnosu na to šta će u njoj biti, a nakon postavljanja klime i kompletnu instalaciju uređaja. Prezadovoljni smo.”</p>
+        <div class="who"><div class="av">M</div><div><b>Marko</b><small>Zemun</small></div></div>
+      </div>
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>„Uz pomoć uređaja smo napravili komoru za točena piva. Sve sjajno funkcioniše i jako smo zadovoljni. Sloba je izuzetno saradljiv, brz, konkretan i stručan.”</p>
+        <div class="who"><div class="av">M</div><div><b>Miloš</b><small>Republika Pub, Beograd</small></div></div>
+      </div>
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>„Odličan uređaj koji znatno pojeftinjuje izradu rashladne komore. Profesionalan pristup i odlična komunikacija. Velika preporuka!”</p>
+        <div class="who"><div class="av">R</div><div><b>Robert</b><small>Sombor</small></div></div>
+      </div>
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>„Sve super i po dogovoru, za sada više nego zadovoljan uređajem. Sloba je uvek tu za podršku. Preporuka!”</p>
+        <div class="who"><div class="av">V</div><div><b>Vuk</b><small>Vrbas</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="pitanja">
+  <div class="container faq-wrap">
+    <div class="reveal">
+      <div class="eyebrow">Česta pitanja</div>
+      <h2>Imate pitanje?</h2>
+      <p class="lead">Odgovori na pitanja koja nam kupci najčešće postavljaju.</p>
+      <div class="help-card">
+        <b style="font-size:19px">Niste našli odgovor?</b>
+        <p>Pomažemo besplatno oko veličine komore, izolacije i izbora klime.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="tel:+381652059474"><svg><use href="#i-phone"/></svg>Pozovite</a>
+          <a class="btn btn-viber" href="viber://chat?number=%2B381652059474"><svg><use href="#i-viber"/></svg>Viber</a>
+        </div>
+      </div>
+    </div>
+    <div class="faq reveal">
+      <details open>
+        <summary>Da li uređaj dodatno opterećuje kompresor klime?</summary>
+        <p>Ne više nego inače. Opterećenje kompresora se meri brojem uključivanja i vremenom rada. Zbog dobre izolacije komore, kompresor je u proseku manje uključen nego klima u stanu. To smo potvrdili višegodišnjim merenjima u našoj test komori.</p>
+      </details>
+      <details>
+        <summary>Da li se klima uređaj prepravlja ili modifikuje?</summary>
+        <p>Ne. Prilikom povezivanja se na klimi ne vrše nikakve prepravke. Kada skinete °CoolirajSačuvaj uređaj, klima se za nekoliko minuta vraća u svoju osnovnu funkciju.</p>
+      </details>
+      <details>
+        <summary>Kakvu izolaciju zahteva komora?</summary>
+        <p>Standardne izolacione materijale: stiropor, stirodur ili kamenu vunu. Debljina zavisi od materijala i željene temperature. Bez brige, savetima vam pomažemo tokom cele izrade komore.</p>
+      </details>
+      <details>
+        <summary>Da li je klima od 12.000 BTU dovoljna?</summary>
+        <p>Zavisi od veličine komore i temperature koju želite. Za neke prostore je dovoljna klima od 12.000 BTU, a za veće ili hladnije komore potrebna je klima od 18.000 ili 24.000 BTU. Okvirnu procenu daje <a href="#kalkulator" style="color:var(--ice-500);font-weight:700">naš kalkulator</a>, a pri izboru klime računajte na našu besplatnu tehničku podršku.</p>
+      </details>
+      <details>
+        <summary>Sa kojim klimama uređaj radi?</summary>
+        <p>Sa svim inverter i on/off split klimama, kao i sa prozorskim klimama. Možete koristiti i polovnu klimu.</p>
+      </details>
+      <details>
+        <summary>Ko ugrađuje uređaj?</summary>
+        <p>Možete ga povezati sami, uz pomoć lokalnog instalatera klima ili uz pomoć našeg tehničara. Povezivanje traje najviše 15 minuta. U promotivnom periodu nudimo besplatnu ugradnju.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="kontakt">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <div class="eyebrow">Kontakt</div>
+      <h2>Napravimo vašu komoru zajedno</h2>
+      <p class="lead">Pošaljite nam dimenzije prostora i šta želite da čuvate. Javljamo se sa predlogom klime, izolacije i ponudom.</p>
+      <ul class="c-list">
+        <li><a class="c-item" href="tel:+381652059474"><div class="ci"><svg><use href="#i-phone"/></svg></div><div><small>Telefon</small><b>+381 65 205 9474</b></div></a></li>
+        <li><a class="c-item" href="viber://chat?number=%2B381652059474"><div class="ci v"><svg><use href="#i-viber"/></svg></div><div><small>Viber</small><b>Pišite nam na Viber</b></div></a></li>
+        <li><a class="c-item" href="mailto:info@coolirajsacuvaj.rs"><div class="ci"><svg><use href="#i-mail"/></svg></div><div><small>E-mail</small><b>info@coolirajsacuvaj.rs</b></div></a></li>
+        <li><div class="c-item"><div class="ci"><svg><use href="#i-clock"/></svg></div><div><small>Radno vreme · Novi Beograd</small><b>Pon–Pet, 08–18h</b></div></div></li>
+      </ul>
+    </div>
+    <form class="form reveal" id="leadForm">
+      <h3>Zatražite besplatnu ponudu</h3>
+      <p>Odgovaramo u roku od jednog radnog dana.</p>
+      <div class="f-row">
+        <div class="f-field"><label for="fName">Ime i prezime *</label><input id="fName" required autocomplete="name"></div>
+        <div class="f-field"><label for="fPhone">Telefon *</label><input id="fPhone" type="tel" required autocomplete="tel"></div>
+      </div>
+      <div class="f-row">
+        <div class="f-field"><label for="fMail">E-mail</label><input id="fMail" type="email" autocomplete="email"></div>
+        <div class="f-field"><label for="fCity">Mesto</label><input id="fCity" autocomplete="address-level2"></div>
+      </div>
+      <div class="f-row">
+        <div class="f-field"><label for="fDims">Dimenzije prostora (D×Š×V)</label><input id="fDims" placeholder="npr. 3 × 2,5 × 2,4 m"></div>
+        <div class="f-field"><label for="fWhat">Šta želite da čuvate?</label>
+          <select id="fWhat">
+            <option>Voće i povrće</option><option>Meso</option><option>Mleko i mlečni proizvodi</option><option>Jaja</option><option>Vino / pivo</option><option>Cveće</option><option>Drugo</option>
+          </select>
+        </div>
+      </div>
+      <div class="f-field"><label for="fMsg">Poruka</label><textarea id="fMsg" placeholder="Da li već imate klimu? Kakva je izolacija? Bilo šta što bi nam pomoglo..."></textarea></div>
+      <button class="btn btn-primary btn-block" type="submit">Pošalji upit <svg><use href="#i-arrow"/></svg></button>
+      <div class="form-ok" id="formOk">Otvoren je vaš e-mail program sa popunjenom porukom. Pošaljite je i javićemo se uskoro!</div>
+      <p class="small">Vaše podatke koristimo samo da bismo vam odgovorili.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <a href="#top" class="brand"><img src="img/logo.png" alt="" width="44" height="44" loading="lazy">°Cooliraj Sačuvaj™</a>
+        <p style="margin-top:14px;max-width:320px">Inovativni elektronski uređaj koji od obične klime pravi rashladnu komoru. Osmišljeno i razvijeno u Srbiji.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/coolirajsacuvaj" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/cooliraj.sacuvaj.9/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a href="https://www.linkedin.com/in/%C2%B0coolirajsa%C4%8Duvaj%E2%84%A2-inovativni-elektronski-ure%C4%91aj-b65257293" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM2 9h4v12H2zM9 9h4v2c.6-1.1 2-2.2 4-2.2 4 0 5 2.6 5 6V21h-4v-5.5c0-1.5-.3-3-2.1-3S13 14 13 15.4V21H9z"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Proizvod</h4><ul><li><a href="#kako">Kako radi</a></li><li><a href="#tehnologija">Tehnologija</a></li><li><a href="#aplikacija">Aplikacija</a></li><li><a href="https://coolirajsacuvaj.company.site/products">Prodavnica</a></li></ul></div>
+      <div><h4>Pomoć</h4><ul><li><a href="#kalkulator">Kalkulator</a></li><li><a href="#pitanja">Česta pitanja</a></li><li><a href="#utisci">Utisci korisnika</a></li><li><a href="#">Blog</a></li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:+381652059474">+381 65 205 9474</a></li><li><a href="mailto:info@coolirajsacuvaj.rs">info@coolirajsacuvaj.rs</a></li><li>Novi Beograd</li><li>Pon–Pet, 08–18h</li></ul></div>
+    </div>
+    <div class="f-bottom"><span>© 2026 °CoolirajSačuvaj™. Sva prava zadržana.</span><span>Jeftina rashladna komora · Hladnjača od klime · Uradi sam komora</span></div>
+  </div>
+</footer>
+
+<!-- MOBILE ACTION BAR -->
+<div class="mbar">
+  <a class="call" href="tel:+381652059474"><svg><use href="#i-phone"/></svg>Pozovi</a>
+  <a class="vib" href="viber://chat?number=%2B381652059474"><svg><use href="#i-viber"/></svg>Viber</a>
+  <a class="req" href="#kontakt"><svg><use href="#i-mail"/></svg>Pošalji upit</a>
+</div>
+
+<script>
+// Header background on scroll
+const header = document.querySelector('.header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
+window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+// Ice-block headings: light ice where the heading text is light (dark sections), deeper ice elsewhere;
+// each heading gets its own crack position so the cracks don't repeat
+document.querySelectorAll('h1, h2').forEach(h => {
+  const [r, g, b] = getComputedStyle(h).color.match(/\d+/g).map(Number);
+  h.classList.toggle('on-dark', (r*.3 + g*.59 + b*.11) / 255 > .6);
+  h.classList.add('iced');
+  h.style.setProperty('--crack', `${Math.round(Math.random() * 100)}% ${Math.round(Math.random() * 100)}%`);
+});
+
+// Mobile menu
+const nav = document.getElementById('nav'), menuBtn = document.getElementById('menuBtn');
+menuBtn.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open);
+  if (open) header.classList.add('scrolled'); else onScroll();
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); }));
+
+// Reveal on scroll (content stays visible if JS or IntersectionObserver is unavailable)
+if ('IntersectionObserver' in window) {
+  document.documentElement.classList.add('js');
+  // Elements that come into view together appear one after another
+  const io = new IntersectionObserver(entries => entries.filter(e => e.isIntersecting).forEach((e, k) => {
+    const el = e.target;
+    el.style.setProperty('--d', Math.min(k * .09, .6) + 's');
+    el.classList.add('in'); io.unobserve(el);
+    setTimeout(() => el.style.setProperty('--d', '0s'), 1600); // so hover effects don't lag afterwards
+  }), {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+}
+
+// Hero text and device rise in once the ice intro is gone
+window.introDone.then(() => requestAnimationFrame(() => document.querySelector('.hero').classList.add('hero-in')));
+
+// Scroll progress bar
+(() => {
+  const bar = document.createElement('div'); bar.className = 'scroll-progress'; document.body.append(bar);
+  let ticking = false;
+  const upd = () => { ticking = false; bar.style.transform = `scaleX(${scrollY / Math.max(1, document.documentElement.scrollHeight - innerHeight)})`; };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(upd); } }, {passive:true});
+  upd();
+})();
+
+// Snow falling in the hero (drifts with the mouse, pauses when the hero is off screen)
+(() => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const hero = document.querySelector('.hero'), c = document.createElement('canvas');
+  c.className = 'hero-snow'; c.setAttribute('aria-hidden', 'true'); hero.prepend(c);
+  const ctx = c.getContext('2d'), dpr = Math.min(devicePixelRatio || 1, 2);
+  let w, h, flakes = [], wind = 0, raf = 0;
+  const make = anywhere => ({x: Math.random() * w, y: anywhere ? Math.random() * h : -8, r: Math.random() * 2.2 + .5,
+    vy: Math.random() * .45 + .2, ph: Math.random() * 6.28, a: Math.random() * .45 + .2});
+  const resize = () => {
+    w = hero.clientWidth; h = hero.clientHeight;
+    c.width = w * dpr; c.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    flakes = Array.from({length: Math.round(w * h / 12000)}, () => make(true));
+  };
+  const frame = t => {
+    ctx.clearRect(0, 0, w, h); ctx.fillStyle = '#dff7ff';
+    for (const f of flakes) {
+      f.y += f.vy * (1 + f.r * .4);
+      f.x += Math.sin(t / 1600 + f.ph) * .3 + wind * f.r * .35;
+      if (f.y > h + 8) Object.assign(f, make(false));
+      if (f.x < -8) f.x = w + 8; else if (f.x > w + 8) f.x = -8;
+      ctx.globalAlpha = f.a; ctx.beginPath(); ctx.arc(f.x, f.y, f.r, 0, 6.283); ctx.fill();
+    }
+    raf = requestAnimationFrame(frame);
+  };
+  hero.addEventListener('pointermove', e => { wind = (e.clientX / innerWidth - .5) * 2; });
+  hero.addEventListener('pointerleave', () => { wind = 0; });
+  new IntersectionObserver(([e]) => {
+    cancelAnimationFrame(raf);
+    if (e.isIntersecting) raf = requestAnimationFrame(frame);
+  }).observe(hero);
+  addEventListener('resize', resize); resize();
+})();
+
+// Stats count up when they come into view (the temperature counts down from 25, the cost from 500)
+(() => {
+  const nums = [...document.querySelectorAll('.stat .cnt')];
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  nums.forEach(n => { n.dataset.to = n.textContent; n.textContent = n.dataset.from; });
+  const io = new IntersectionObserver(([e]) => {
+    if (!e.isIntersecting) return;
+    io.disconnect();
+    const t0 = performance.now();
+    const step = now => {
+      const k = Math.min(1, (now - t0) / 1800), ease = 1 - Math.pow(1 - k, 4);
+      nums.forEach(n => n.textContent = Math.round(+n.dataset.from + (n.dataset.to - n.dataset.from) * ease));
+      if (k < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }, {threshold:.4});
+  io.observe(document.querySelector('.stats-grid'));
+})();
+
+// Cursor spotlight on cards
+if (matchMedia('(hover: hover)').matches) {
+  document.querySelectorAll('.step, .aud, .t-card, .c-item').forEach(card => {
+    card.classList.add('spot');
+    card.addEventListener('pointermove', e => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', e.clientX - r.left + 'px');
+      card.style.setProperty('--my', e.clientY - r.top + 'px');
+    });
+  });
+}
+
+// Hero device: 7-segment display and button presses over the product photo
+(() => {
+  const dev = document.getElementById('device'), lcd = document.getElementById('lcd');
+  const btns = dev.querySelectorAll('.press'); // −, P, +
+  const chip = document.querySelector('.temp-chip.two b');
+  const NS = 'http://www.w3.org/2000/svg';
+  const SEG = {a:[6,0,32,8], b:[36,6,8,30], c:[36,40,8,30], d:[6,68,32,8], e:[0,40,8,30], f:[0,6,8,30], g:[6,34,32,8]};
+  const GLYPH = {'0':'abcdef','1':'bc','2':'abdeg','3':'abcdg','4':'bcfg','5':'acdfg','6':'acdefg','7':'abc','8':'abcdefg','9':'abcdfg',
+    '-':'g','E':'adefg','S':'acdfg','t':'defg','C':'adef','°':'abfg','P':'abefg',' ':''};
+  const el = (tag, attrs, parent) => { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); parent.appendChild(n); return n; };
+
+  const defs = el('defs', {}, lcd);
+  const f = el('filter', {id:'lcdGlow', x:'-20%', y:'-30%', width:'140%', height:'160%'}, defs);
+  el('feGaussianBlur', {stdDeviation:'2.4', result:'b'}, f);
+  const m = el('feMerge', {}, f); ['b','b','SourceGraphic'].forEach(i => el('feMergeNode', {in:i}, m));
+  const skew = 'translate(9 12) skewX(-6)';
+  const ghost = el('g', {class:'ghost', transform:skew}, lcd), litG = el('g', {class:'lit', transform:skew, filter:'url(#lcdGlow)'}, lcd);
+  const lit = [0,1,2,3].map(i => {
+    const x = i * 58, cell = {};
+    for (const s in SEG) {
+      const [sx, sy, w, h] = SEG[s], r = {x:x+sx, y:sy, width:w, height:h, rx:4};
+      el('rect', r, ghost); cell[s] = el('rect', r, litG);
+    }
+    const dp = {cx:x+50, cy:72, r:4.5};
+    el('circle', dp, ghost); cell.dp = el('circle', dp, litG);
+    return cell;
+  });
+
+  // "3.8°C" -> 4 cells; a dot lights the previous digit's decimal point
+  function show(str) {
+    const cells = [];
+    for (const ch of str) ch === '.' && cells.length ? cells[cells.length-1].dp = true : cells.push({ch, dp:false});
+    while (cells.length < 4) cells.unshift({ch:' ', dp:false});
+    cells.slice(-4).forEach((c, i) => {
+      const on = GLYPH[c.ch] || '';
+      for (const s in SEG) lit[i][s].classList.toggle('on', on.includes(s));
+      lit[i].dp.classList.toggle('on', c.dp);
+    });
+    dev.classList.toggle('lit', str.trim() !== '');
+  }
+  const fmtTemp = t => (t >= 9.95 ? Math.round(t) : t.toFixed(1)) + '°C';
+  const showTemp = t => { show(fmtTemp(t)); chip.textContent = t.toFixed(1).replace('.', ',') + ' °C'; };
+
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { showTemp(3.8); return; }
+
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const press = async (i, ms = 240) => { btns[i].classList.add('on'); await sleep(ms); btns[i].classList.remove('on'); };
+  const blink = async (str, times) => { for (let k = 0; k < times; k++) { show(str); await sleep(420); show(''); await sleep(160); } show(str); };
+  const tween = (from, to, ms, fn) => new Promise(done => {
+    const t0 = performance.now();
+    const step = now => { const k = Math.min(1, (now - t0) / ms); fn(from + (to - from) * (1 - Math.pow(1 - k, 3))); k < 1 ? requestAnimationFrame(step) : done(); };
+    requestAnimationFrame(step);
+  });
+
+  (async () => {
+    // Power-on self test (after the ice intro), then the room cools down from 25 °C
+    await window.introDone; await sleep(400);
+    show('8.8.8.8.'); btns.forEach(b => b.classList.add('on')); await sleep(900);
+    btns.forEach(b => b.classList.remove('on')); show(''); await sleep(250);
+    showTemp(25); await sleep(1300);
+    dev.classList.add('cooling'); await tween(25, 3.8, 5200, showTemp); dev.classList.remove('cooling');
+    let cur = 3.8, sp = 4;
+    // Then keep changing the target with P and −/+ (4,0 -> 3,0 -> 4,0 ...)
+    for (;;) {
+      await sleep(1800);
+      const dir = sp > 3.5 ? -1 : 1;
+      await press(1); show('SEt'); await sleep(900);
+      await blink(fmtTemp(sp), 1); await sleep(300);
+      for (let k = 0; k < 2; k++) { await press(dir < 0 ? 0 : 2); sp += dir * .5; show(fmtTemp(sp)); await sleep(520); }
+      await blink(fmtTemp(sp), 2); await sleep(300);
+      await press(1); showTemp(cur); await sleep(700);
+      dev.classList.toggle('cooling', sp < cur); await tween(cur, sp, 2800, showTemp); dev.classList.remove('cooling');
+      cur = sp;
+    }
+  })();
+})();
+
+// App section: while the stage is pinned, scrolling moves the phone screen from feature to feature
+(() => {
+  const track = document.getElementById('appTrack'), stage = track.querySelector('.app-stage');
+  const col = document.getElementById('appPhone'), wrap = col.querySelector('.phone-wrap'), phone = wrap.querySelector('.phone');
+  const screen = phone.querySelector('.screen'), page = screen.querySelector('.scr-page'), notif = screen.querySelector('.scr-notif');
+  const blocks = [...page.querySelectorAll('.scr-block')], callouts = [...col.querySelectorAll('.callout')];
+  const steps = [...document.querySelectorAll('#appSteps li')], bar = document.getElementById('appBar');
+  const N = blocks.length, PHONE_W = 300, PHONE_H = 584, SCREEN_H = 560, BEZEL = 12, GAP = 28;
+  const desktop = matchMedia('(min-width: 921px)');
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const ease = t => t < .5 ? 2*t*t : 1 - Math.pow(-2*t + 2, 2) / 2;
+  let targets = [], scale = 1, active = null, token = 0;
+
+  function measure() {
+    track.style.height = stage.offsetHeight * (1 + N * .75) + 'px';
+    // Screen scroll position that brings each feature to the middle of the screen
+    const maxY = page.offsetHeight - SCREEN_H;
+    targets = blocks.map(b => Math.max(0, Math.min(maxY, b.offsetTop + b.offsetHeight / 2 - SCREEN_H * .55)));
+    // Fit the phone into the free space
+    const s = desktop.matches
+      ? Math.min((stage.clientHeight - 40) / PHONE_H, (col.clientWidth - 210) / PHONE_W)
+      : Math.min((stage.clientHeight - stage.querySelector('.app-copy').offsetHeight - 200) / PHONE_H, col.clientWidth / PHONE_W);
+    scale = Math.max(.5, Math.min(1, s));
+    phone.style.transform = `scale(${scale})`;
+    wrap.style.width = PHONE_W * scale + 'px';
+    wrap.style.height = PHONE_H * scale + 'px';
+    // Desktop: each callout sits left of the phone, level with its feature, the arrow reaching the feature's edge
+    callouts.forEach((c, i) => {
+      if (!desktop.matches) { c.removeAttribute('style'); return; }
+      const w = Math.max(180, Math.min(260, wrap.offsetLeft - GAP)), b = blocks[i];
+      c.style.width = w + 'px';
+      c.style.left = wrap.offsetLeft - GAP - w + 'px';
+      const cy = wrap.offsetTop + (BEZEL + b.offsetTop + b.offsetHeight / 2 - targets[i]) * scale;
+      c.style.top = Math.max(0, Math.min(col.clientHeight - c.offsetHeight, cy - c.offsetHeight / 2)) + 'px';
+      c.style.setProperty('--reach', GAP + (BEZEL + 20) * scale - 2 + 'px');
+    });
+    update();
+  }
+
+  function update() {
+    const total = track.offsetHeight - stage.offsetHeight, stickyTop = parseFloat(getComputedStyle(stage).top);
+    const prog = Math.max(0, Math.min(1, (stickyTop - track.getBoundingClientRect().top) / total)) * N;
+    const i = Math.min(N - 1, Math.floor(prog)), f = prog - i;
+    // Hold on a feature for the first half of its scroll range, then glide to the next one
+    let y = targets[i], a = i;
+    if (i < N - 1 && f > .55) {
+      y += (targets[i + 1] - targets[i]) * ease(Math.min(1, (f - .55) / .37));
+      a = f < .92 ? -1 : i + 1;
+    }
+    page.style.transform = `translateY(${-y}px)`;
+    bar.style.transform = `scaleX(${Math.min(1, prog / (N - .4))})`;
+    setActive(a);
+  }
+
+  function setActive(a) {
+    if (a === active) return;
+    active = a; token++;
+    callouts.forEach((c, i) => c.classList.toggle('on', i === a));
+    blocks.forEach((b, i) => b.classList.toggle('hl', i === a));
+    screen.classList.toggle('focus', a >= 0);
+    notif.classList.remove('on');
+    if (a < 0) return;
+    steps.forEach((s, i) => s.classList.toggle('on', i === a));
+    blocks[a].classList.add('seen');
+    if (a === 1) runSetpoint(token);
+    if (a === 3) sleep(500).then(() => a === active && notif.classList.add('on'));
+  }
+
+  // Setpoint demo: press − twice, 4,0 -> 3,0 °C, and the "meso" preset lights up
+  const spVal = blocks[1].querySelector('.setpoint b'), minus = blocks[1].querySelector('.setpoint button');
+  const presets = blocks[1].querySelectorAll('.presets span');
+  const setSp = v => { spVal.textContent = v.toFixed(1).replace('.', ',') + ' °C'; presets.forEach(p => p.classList.toggle('on', parseFloat(p.textContent) === v)); };
+  async function runSetpoint(t) {
+    setSp(4);
+    for (const v of [3.5, 3]) {
+      await sleep(650); if (t !== token) return;
+      minus.classList.add('press'); setSp(v);
+      await sleep(180); minus.classList.remove('press');
+    }
+  }
+
+  steps.forEach((s, i) => s.addEventListener('click', () => {
+    const total = track.offsetHeight - stage.offsetHeight, stickyTop = parseFloat(getComputedStyle(stage).top);
+    scrollTo({top: track.getBoundingClientRect().top + scrollY - stickyTop + total * (i + .2) / N, behavior: 'smooth'});
+  }));
+
+  let ticking = false;
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; update(); }); } }, {passive:true});
+  addEventListener('resize', measure);
+  desktop.addEventListener('change', measure);
+  addEventListener('load', measure);
+  document.fonts && document.fonts.ready.then(measure);
+  measure();
+})();
+
+// Calculator: okvirna procena (~550 BTU po m³ za 3–5 °C uz dobru izolaciju)
+const BTU_PER_M3 = 550;
+const SIZES = [
+  {btu:9000,  kw:'2,6 kW'},
+  {btu:12000, kw:'3,5 kW'},
+  {btu:18000, kw:'5,3 kW'},
+  {btu:24000, kw:'7,0 kW'}
+];
+const INSUL = {
+  '1.25': {xps:'10–12 cm', eps:'15–20 cm'},
+  '1':    {xps:'8–10 cm',  eps:'12–15 cm'},
+  '0.8':  {xps:'5–8 cm',   eps:'8–12 cm'}
+};
+const fmt = n => n.toLocaleString('sr-RS', {maximumFractionDigits:1});
+const val = id => Math.max(0, parseFloat(document.getElementById(id).value.replace(',', '.')) || 0);
+const radio = name => document.querySelector(`input[name="${name}"]:checked`).value;
+const bump = el => { el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); };
+const setResult = (id, text) => { const el = document.getElementById(id); if (el.textContent !== text) { el.textContent = text; bump(el.parentElement); } };
+
+// The recommended BTU rolls to its new value
+let shownBtu = 12000, btuRaf = 0;
+function showBtu(to) {
+  const el = document.getElementById('rBtu');
+  cancelAnimationFrame(btuRaf);
+  if (to === null) { if (shownBtu !== -1) bump(el); shownBtu = -1; el.innerHTML = '24.000+<small>BTU</small>'; return; }
+  if (to === shownBtu) return;
+  const from = shownBtu < 0 ? 24000 : shownBtu, t0 = performance.now();
+  const step = now => {
+    const k = Math.min(1, (now - t0) / 650);
+    shownBtu = Math.round((from + (to - from) * (1 - Math.pow(1 - k, 3))) / 100) * 100;
+    el.innerHTML = shownBtu.toLocaleString('sr-RS') + '<small>BTU</small>';
+    if (k < 1) btuRaf = requestAnimationFrame(step);
+  };
+  btuRaf = requestAnimationFrame(step);
+  bump(el);
+}
+
+function calc() {
+  const L = val('cL'), W = val('cW'), H = val('cH');
+  const vol = L * W * H;
+  const area = 2 * (L*W + L*H + W*H);
+  const temp = radio('temp');
+  const load = vol * BTU_PER_M3 * parseFloat(temp) * parseFloat(radio('loc')) * parseFloat(radio('ins'));
+  const size = SIZES.find(s => s.btu >= load);
+  const warn = document.getElementById('rWarn');
+  showBtu(size ? size.btu : null);
+  if (size) {
+    document.getElementById('rNote').textContent = `Standardna kućna klima od ${size.kw}`;
+    warn.classList.remove('show');
+  } else {
+    document.getElementById('rNote').textContent = 'Veća komora: potreban individualni proračun';
+    warn.classList.add('show');
+  }
+  setResult('rVol', fmt(vol) + ' m³');
+  setResult('rArea', fmt(area) + ' m²');
+  setResult('rXps', INSUL[temp].xps);
+  setResult('rEps', INSUL[temp].eps);
+  return {L, W, H, vol, size};
+}
+document.getElementById('calcForm').addEventListener('input', calc);
+calc();
+
+// Calculator CTA prefills the contact form
+const TEMP_TO_GOODS = {'1.25':'Meso', '1':'Voće i povrće', '0.8':'Vino / pivo'};
+document.getElementById('calcCta').addEventListener('click', () => {
+  const {L, W, H, size} = calc();
+  document.getElementById('fDims').value = `${fmt(L)} × ${fmt(W)} × ${fmt(H)} m`;
+  document.getElementById('fWhat').value = TEMP_TO_GOODS[radio('temp')];
+  const rec = size ? size.btu.toLocaleString('sr-RS') + ' BTU' : 'preko 24.000 BTU';
+  const msg = document.getElementById('fMsg');
+  if (!msg.value) msg.value = `Kalkulator je preporučio klimu od ${rec}. Molim vas za ponudu.`;
+});
+
+// Lead form: until a backend is connected, open the visitor's e-mail client with the filled message
+document.getElementById('leadForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const g = id => document.getElementById(id).value.trim();
+  const body = [
+    `Ime i prezime: ${g('fName')}`, `Telefon: ${g('fPhone')}`, `E-mail: ${g('fMail')}`, `Mesto: ${g('fCity')}`,
+    `Dimenzije: ${g('fDims')}`, `Čuva: ${g('fWhat')}`, '', g('fMsg')
+  ].join('\n');
+  window.location.href = 'mailto:info@coolirajsacuvaj.rs?subject=' + encodeURIComponent('Upit za rashladnu komoru - ' + g('fName')) + '&body=' + encodeURIComponent(body);
+  document.getElementById('formOk').style.display = 'block';
+});
+</script>
+</body>
+</html>
